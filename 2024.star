@@ -20,7 +20,7 @@ def fetch_price(token):
     resp = http.get(PRICE_ENDPOINT + token, ttl_seconds = TTL)
 
     if resp.status_code != 200:
-        fail("Coindesk request failed with status %d", resp.status_code)
+        fail("Polymarket request failed with status %d", resp.status_code)
 
     return resp.json()["price"]
 
